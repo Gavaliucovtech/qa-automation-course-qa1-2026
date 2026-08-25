@@ -115,3 +115,5 @@ const luckyNumbers = [7, 10, 19];
 
 const studentName = "Alice";
 console.log(Array.isArray(studentName));
+
+// git test
