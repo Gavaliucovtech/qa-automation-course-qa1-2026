@@ -117,3 +117,4 @@ const studentName = "Alice";
 console.log(Array.isArray(studentName));
 
 // git test
+//check
