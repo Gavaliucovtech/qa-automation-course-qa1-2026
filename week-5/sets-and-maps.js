@@ -86,3 +86,14 @@ const studentMap = new Map([
 for (const [key, value] of studentMap) {
   console.log(`${key}; ${value}`);
 }
+
+// Using object as keys
+
+const user1 = { name: "Alice" };
+const user2 = { name: "Bob" };
+
+const userRoles = new Map();
+userRoles.set(user1, "admin");
+userRoles.set(user2, "editor");
+
+console.log(userRoles.get(user1));
