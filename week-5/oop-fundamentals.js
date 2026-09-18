@@ -17,8 +17,11 @@ bob.greet();
 const victoria = new Person("Victoria", 20);
 victoria.greet();
 
+// Constructor method !!!
+
 class Phone {
   constructor(brand, model) {
+    // <- (brand, model) -> this are called properties of a class
     this.brand = brand;
     this.model = model;
   }
@@ -35,3 +38,51 @@ const samsungGalaxy20 = new Phone("Samusng", "Galaxy20");
 samsungGalaxy20.describe();
 const samsungGalaxy21 = new Phone("Samusng", "Galaxy21");
 samsungGalaxy21.describe();
+
+// Functions
+
+function printName(firstName) {
+  console.log(firstName);
+}
+
+printName("Victoria");
+printName("Ion");
+
+//The this Keyword
+
+class Student {
+  constructor(name) {
+    this.name = name;
+  }
+  introduce() {
+    console.log(`Hi, I am ${this.name}!`);
+  }
+}
+
+const student1 = new Student("Victoria");
+const Student2 = new Student("Ion");
+
+student1.introduce();
+Student2.introduce();
+
+// Properties and Methods
+
+class Car {
+  constructor(brand, color, speed) {
+    this.brand = brand;
+    this.color = color;
+    this.speed = speed;
+  }
+  accelerate(amount) {
+    this.speed += amount;
+    console.log(`${this.brand} is now going at ${this.speed} km/h`);
+  }
+  brake(amount) {
+    this.speed -= amount;
+    console.log(`${this.brand} slowed down to ${this.speed} km/h`);
+  }
+}
+
+const myCar = new Car("Chevrolet", "white", 80);
+myCar.accelerate(20);
+myCar.brake(30);

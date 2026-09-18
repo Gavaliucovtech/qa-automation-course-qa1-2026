@@ -68,3 +68,4 @@ const result = numbersAll
   .every((num) => num > 50);
 
 console.log(result);
+
